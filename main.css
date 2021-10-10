@@ -1,0 +1,220 @@
+:root {
+    --main-color: #03b0ec;
+    --fade-paragraph-color: #777;;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Amiri', serif;
+    user-select: none;
+}
+.container {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 50px 30px;
+    background-image: url('../images/659a2bc335f31700cacba5e1f2556b1f.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.col-25 {
+    flex-basis: 35%;
+    position: relative;
+}
+.col-25::after {
+    content: "";
+    position: absolute;
+    height: calc(100% - 169px);
+    width: 4px;
+    background-color: #bbbcbb;
+    right: -16px;
+    bottom: 0;
+}
+.col-25 header,
+.contact,
+.skills,
+.language {
+    transform: translateX(-300px);
+    animation-name: transform-translate;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.contact {
+    animation-delay: 2s;
+}
+.col-25 .img {
+    text-align: center
+}
+.col-25 .img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.contact h2,
+.skills h2,
+.language h2,
+.hobbies h2 {
+    text-align: center;
+    margin: 20px 0 20px;
+}
+.contact-content {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.contact-content i {
+    background-color: var(--main-color);
+    padding: 7px;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px
+}
+.contact-content p {
+    color: var(--fade-paragraph-color);
+}
+.skills {
+    animation-delay: 4s;
+}
+.skill-prog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.prog {
+    width: 60%;
+    height: 8px;
+}
+.prog span {
+    height: 100%;
+    background-color: var(--main-color);
+    display: block;
+    border-radius: 10px;
+}
+.language {
+    animation-delay: 6s;
+}
+.hobbies-box {
+    text-align: center;
+    overflow: hidden;
+}
+.hobbies-box i {
+    margin-right: 15px;
+    padding: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    color: white;
+    transform: translateY(200px);
+    animation-name: transform-translate;
+    animation-delay: 8s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.hobbies-box i:nth-of-type(1) {
+    animation-delay: 8s;
+}
+.hobbies-box i:nth-of-type(2) {
+    animation-delay: 9s;
+}
+.hobbies-box i:nth-of-type(3) {
+    animation-delay: 10s;
+}
+.hobbies-box i:nth-of-type(4) {
+    animation-delay: 11s;
+}
+.col-75 {
+    flex-basis: 60%;
+}
+.header-col-75 {
+    transform: translateX(500px);
+    animation-name: transform-translate;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.col-75 h1 {
+    font-size: 40px;
+    color: white;
+}
+.col-75 h1 span {
+    color: var(--main-color);
+}
+.col-75 h2 {
+    color: white;
+    margin-bottom: 100px;
+}
+.col-75 article {
+    margin-bottom: 30px;
+    transform: translateX(500px);
+}
+.col-75 article:nth-child(1) {
+    animation-name: transform-translate;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.col-75 article:nth-child(2) {
+    animation-name: transform-translate;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.col-75 article:nth-child(3) {
+    animation-name: transform-translate;
+    animation-delay: 2s;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+.col-75 article:nth-child(4) {
+    animation-name: transform-translate;
+    animation-delay: 2s;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+.col-75 article span {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--fade-paragraph-color);
+}
+.col-75 article h2 {
+    background-color: #284358;
+    padding: 10px 20px;
+    width: 80%;
+    position: relative;
+    border-radius: 0 50px 0 0;
+    margin-bottom: 20px;
+}
+.col-75 article h2::before {
+    content: "";
+    position: absolute;
+    right: -62px;
+    bottom: 0;
+    width: 150px;
+    height: 100%;
+    border-radius: 0 100% 0 0;
+    background-color: #284358;
+    z-index: 2
+}
+.col-75 article h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -87px;
+    width: 130px;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 0 87% 0 0;
+    z-index: 1;
+}
+.col-75 article p {
+    color: var(--fade-paragraph-color);
+}
+
+@keyframes transform-translate {
+    to {
+        transform: translateX(0);
+    }
+}
